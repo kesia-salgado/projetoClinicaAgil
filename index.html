@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Consulta Ágil</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <link rel="icon" href="stylesheet/icon.svg" type="image/png" alt="icone de logo">
+    <script src="script.js"></script>
+</head>
+
+<header>
+    
+    <nav>
+        <img src="stylesheet/icon.svg" width="100px" height="100px" alt="imagem de setas circulares na cor preta">
+        <ul>
+            <li><a href="#inicio" onclick="inicio()">Inicio</a></li> <!-- utilizando onclick para trabalhar no javascript-->
+            <li><a href="#cadastroForm" onclick="cadastro()">Cadastrar Paciente</a></li>
+            <li><a href="#marcacaoForm" onclick="marcacaoConsulta()">Marcar Consulta</a></li>
+            <li><a href="#cancelamentoForm" onclick="cancelamento()">Cancelar Consulta</a></li>
+            <li><a href="#sair" onclick="encerrar()">Sair</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="conteudo">
+        <h1>Clínica Consulta Ágil</h1>
+        <p>Cadastre-se, marque ou cancele suas consultas rapidamente.</p>  
+    </div>
+    
+    <main>             
+        <div class="cadastro">
+            <h2>Cadastrar Paciente</h2>
+            <form id="cadastroForm">
+                <label for="nomePaciente">Nome</label>
+                <input type="text" id="nomePaciente" placeholder="Digite nome completo" required>
+                <label for="telefonePaciente">Telefone</label>
+                <input type="text" id="telefonePaciente" placeholder="Digite número de telefone" required>
+                <button type="button" onclick="cadastro()">Clique aqui para cadastrar</button>
+                <div id="listaPacientes"></div>
+            </form>
+        </div>
+
+        <div class="marcacaoConsulta">
+            <h2>Marcação Consulta<h2>
+                <p>Faça login e realize a marcação de consulta</p>
+            <form id="marcacaoForm">
+                <label for="especialidadeMedica">Escolha a Especialidade</label>
+                <select id="especialidadeMedica">
+                    <option value="clinicoGeral">Clínico Geral</option>
+                    <option value="pediatra">Pediatra</option>
+                    <option value="cardiologista">Cardiologista</option>
+                </select>
+                <button type="button" onclick="listaPacientes()">Selecione paciente:</button>
+                <div id="disponibilidadeConsulta"></div>
+                <div id="consultaConfirmada"></div>
+            </form>
+        </div>
+
+        <div class="cancelamento">
+            <h2>Cancelar Consulta<h2>
+                <p>Faça login e realize o cancelamento de consulta</p>
+            <form id="cancelamentoForm">
+                <button type="button" onclick="listaConsultas()">Escolha consulta que deseja cancelar:</button>
+                <div id="listaConsultas"></div>
+                </form>
+        </div>
+
+        <div class="encerramento">
+            <h2>Sair</h2>
+            <div id="sairPrograma"></div>
+            <button type="sair" onclick="encerrar()">Clique aqui para sair</button>
+        </div>
+    </main>  
+
+</body>
+<footer>
+    <p>Copyright & copy: 2024 Késia Salgado</p>
+</footer>
+</html>

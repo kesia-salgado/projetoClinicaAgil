@@ -1,0 +1,109 @@
+/* Adicione estas regras no seu arquivo CSS */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  list-style: none;
+  text-decoration: none;
+  background-size: cover;
+}
+
+header {
+  padding: 24px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background: linear-gradient(120deg, #3acbf0 0%, #8bb0ff 100%);
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  background-color: #fafafa;
+  border-radius: 14px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  width: 80%;
+  max-width: 800px;
+  margin: 20px; /* Espaçamento ao redor do container */
+}
+
+main {
+  padding: 18px;
+}
+
+.conteudo,
+.cadastro,
+.marcacaoConsulta,
+.cancelamento,
+.encerramento {
+    margin-bottom: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: white;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px;
+  border: 2px solid #dfdfdf;
+  transition: border-color 0.3s;
+  margin-bottom: 12px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #00c3ff;
+}
+
+button {
+  background-color: #00c3ff;
+  color: #fff;
+  border: 0;
+  font-size: 16px;
+}
+
+p {
+  font-size: 15px;
+}
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+@media screen and (max-width: 768px){
+  *{
+      width:100%;
+      flex-direction: column;
+  }
+}
